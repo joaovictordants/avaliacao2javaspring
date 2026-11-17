@@ -30,6 +30,7 @@ public class SecurityConfigurations {
                         (SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
                     req.requestMatchers("/login").permitAll();
+                    req.requestMatchers("/cadastros").permitAll();
                 req.anyRequest().authenticated(); })
 
 
